@@ -12,8 +12,8 @@ const MediaList = ({mediaItems, addToCart}) => {
         <div>
             <h2>Media List</h2>
             {mediaItems.map((mediaItem, index) => (
-            <MediaItem key = {index} mediaItems = {mediaItem} addToCart={addToCart}/>
-            ))};
+            <MediaItem key = {index} mediaItem = {mediaItem} addToCart={addToCart}/>
+            ))}
         </div>
     );
 };
@@ -21,3 +21,15 @@ const MediaList = ({mediaItems, addToCart}) => {
 
 
   export default MediaList;
+
+
+
+//   const MediaLists = ({mediaItems, addToCart}) =>{
+//     return(
+//         <div>
+//             {mediaItems.map(item => (
+//                 <MediaItem key = {item.id} item = {item} addToCart={addToCart}/>
+//             ))}
+//         </div>
+//     )
+//   };
