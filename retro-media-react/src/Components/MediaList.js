@@ -7,14 +7,17 @@
 import React from 'react';
 import MediaItem from './MediaItem';
 
-const MediaList = ({mediaItems, addToCart}) => {
+const MediaList = ({mediaItems, addToCart, removeFromCart, toggleFav}) => {
     return(
-        <div>
-            <h2>Media List</h2>
+        <>
+        <h2>Media List</h2>
+        <div className='media-list'>
+            
             {mediaItems.map((mediaItem, index) => (
-            <MediaItem key = {index} mediaItem = {mediaItem} addToCart={addToCart}/>
+            <MediaItem key = {index} mediaItem = {mediaItem} addToCart={addToCart} removeFromCart={removeFromCart} toggleFav={toggleFav}/>
             ))}
         </div>
+        </>
     );
 };
 
